@@ -1,6 +1,4 @@
-/* General */
-
-
+/* #### */
 /* Font */
 
 @font-face {
@@ -13,20 +11,29 @@
     src: url("Roboto-Regular.ttf");
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: var(--bg-color-secondary);
+}
+
 .reconstruct {
-    font-family: "Reconstruct";
+    font-family: "Reconstruct", sans-serif;
     font-size: 20px;
 }
 
 h1 {
-    font-family: "Reconstruct";
+    font-family: "Reconstruct", sans-serif;
+    font-size: 20px;
 }
 
-button, .drop-shadow{
-    filter: drop-shadow(3px 5px 4px rgba(0, 0, 0, 0.25));
+footer {
+    font-size: 14px;
 }
 
 
+
+/* ######### */
 /* Variables */
 
 :root {
@@ -44,22 +51,182 @@ button, .drop-shadow{
     background-color: var(--bg-purple-faded);
 }
 
+.bg-color-secondary {
+    background-color: var(--bg-color-secondary);
+}
+
 .bg-color-red {
-    background-color: #B51A1A;
+    background-color: var(--alert-color);
 }
 
 .color-purple {
     color: var(--bg-purple);
 }
 
+.border-purple {
+    border: solid var(--bg-purple) 1px;
+}
 
+.limit-width {
+    width: 800px;
+    max-width: 100%;
+}
+
+
+/* ############### */
 /* Global Settings */
 
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    background-color: var(--bg-color-secondary);
+html {
+    all: unset;
 }
+
+main {
+    min-height: 100vh;
+}
+
+.remove-style-default{
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-family: 'Reconstruct', cursive;
+}
+
+.drop-down-fix-position{
+    margin-right:-13px !important;
+}
+
+.hover-accent:hover {
+    background-color: var(--bg-purple);
+    box-shadow: 0 0 10px var(--bg-purple);
+    border-radius: 3px;
+}
+
+.focus-accent:focus-visible {
+    background-color: var(--bg-purple);
+    box-shadow: 0 0 10px var(--bg-purple);
+    border-radius: 3px;
+}
+
+.hover-accent-shadow:hover {
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px white;
+}
+
+.focus-accent-shadow:focus-visible {
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px white;
+}
+
+.hover-accent-outline:hover {
+    outline: solid white;
+    border-radius: 3px;
+}
+
+.focus-accent-outline:focus-visible {
+    outline: solid white;
+    border-radius: 3px;
+}
+
+/* Buttons */
+/* Base */
+
+.lh-buttons {
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.lh-buttons:hover {
+    box-shadow: inset 0 0 5px white;
+}
+
+.lh-buttons:focus {
+    box-shadow: inset 0 0 5px white;
+}
+
+/* Purple */
+.lh-buttons-purple {
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--bg-purple);
+}
+
+.lh-buttons-purple:hover {
+    background-color: rgba(104, 79, 163, 0.75);
+}
+
+.lh-buttons-purple:focus {
+    background-color: rgba(104, 79, 163, 0.75);
+    box-shadow: inset 0 0 5px white;
+}
+
+/* Purple Faded */
+
+.lh-buttons-purple-faded {
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--bg-purple-faded);
+}
+
+.lh-buttons-purple-faded:hover {
+    background-color: rgba(104, 79, 163, 0.5);
+}
+
+.lh-buttons-purple-faded:focus {
+    background-color: rgba(104, 79, 163, 0.5);
+    box-shadow: inset 0 0 5px white;
+}
+
+/* Red */
+
+.lh-buttons-red {
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--alert-color);
+}
+
+.lh-buttons-red:hover {
+    background-color: rgba(183, 26, 26, 0.5);
+}
+
+.lh-buttons-red:focus {
+    background-color: rgba(183, 26, 26, 0.5);
+    box-shadow: inset 0 0 5px white;
+}
+
+
+/* Input fields */
+
+.input {
+    background-color: #F8F0FB;
+    color: black;
+    border: solid black 1px;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+    padding: 4px 6px;
+    border-radius: 0.375rem;
+}
+
+.input::placeholder {
+    color: grey;
+}
+
+
+/* Img sizing */
 
 .logo {
     width: 50px;
@@ -67,272 +234,36 @@ body {
     filter: drop-shadow(1px 3px 2px rgba(0, 0, 0, 0.5));
 }
 
-.dropdown-menu-icon-desktop {
+.avatar-50x50 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid var(--bg-purple) 2px;
+}
+
+.avatar-70x70{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: solid var(--bg-purple) 2px;
+}
+
+.icon-20x20 {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-25x25 {
     height: 25px;
-    width: auto;
+    width: 25px;
 }
-
-.btn-hover:hover {
-    background-color: rgba(104, 79, 163, 0.75);
-}
-
-.btn-hover:focus {
-    background-color: rgba(104, 79, 163, 0.75);
-}
-
-footer {
-    font-size: 14px;
-}
-
-.lg-tiny-margin {
-    margin: 0 10px;
-    width: 100dvw;
+.icon-30x30 {
+    width: 30px;
+    height: 30px;
 }
 
 
 /* Accordions */
-
-
-/* header text color to white */
-
-.accordion-button:not(.collapsed) {
-    color: #ffffff;
-}
-
-
-/* Remove active blue glow */
-
-.accordion-button:focus {
-    box-shadow: none;
-}
-
-
-/* Change arrow color to white */
-
-.accordion-button:after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
-}
-
-
-/* Specific Pages Settings */
-
-
-/* Home Page */
-
-.first-background-img {
-    background-image: url(https://picsum.photos/1920/1080?random=1);
-    background-size: cover;
-}
-
-.carousel-indicators {
-    position: relative;
-    bottom: 10px;
-}
-
-.desktop-card {
-    background-color: #171F33;
-}
-
-.social-icon-desktop {
-    width: 30px;
-    height: auto;
-}
-
-.divider {
-    height: 2px;
-    background-color: rgb(255, 255, 255, 0.4);
-}
-
-
-/* Hub */
-
-.hub .nav-tabs .active {
-    background-color: var(--bg-purple-faded);
-}
-
-.game-tag-color {
-    color: #EAA928;
-}
-
-.chat-window {
-    height: 75vh;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.chat-window > div > div {
-    margin-bottom: 5px;
-    padding: 0;
-}
-
-.chat-window p {
-    margin: 0;
-    padding: 5px 10px;
-    background-color: #171F33;
-    border: 1px solid #1E1E1E;
-    border-radius: 10px;
-}
-
-.disclaimer {
-    background-color: #B51A1A;
-    border-radius: 10px;
-}
-
-
-/* Sign In & Connection */
-
-.sign-in-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.5)), url(assets/man-neon-suit-sits-chair-with-neon-sign-that-says-word-it.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-}
-
-/* Modal forget mail */
-#input-mail-forget{
-    background-color: #F8F0FB;
-    border: 1px solid #1E1F22;
-    color: black;
-    border-radius: 5px;
-    text-indent: 5px;
-}
-
-
-/* FAQ */
-
-
-/* header bg color */
-
-.faq-accordion-button:not(.collapsed) {
-    background-color: rgba(104, 79, 163, 1);
-}
-
-/* account */
-
-.avatar{
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid rgba(104, 79, 163, 1);
-    object-fit: cover;
-}
-
-/* form upload Avatar */
-.label-file {
-    cursor: pointer;
-    font-weight: bold;
-    border: 1px dashed rgba(104, 79, 163, 0.75);
-    background-color: #1E1F22;
-    display: block;
-    font-size: 0.8em;
-}
-
-.label-file:hover {
-    background-color: rgba(104, 79, 163, 0.75);
-}
-
-
-/* input */
-#input-pseudo, #input-mail, .input-inGame{
-    width: 60%;
-    background-color: #F8F0FB;
-    border: 1px solid #1E1F22;
-    color: black;
-    border-radius: 5px;
-    text-indent: 5px;
-}
-
-
-#input-pseudo::placeholder, #input-mail::placeholder, .input-inGame::placeholder{
-    color: black;
-}
-
-
-.btn-delete{
-    background-color: var(--alert-color);
-}
-
-.btn-delete:hover{
-    background-color: var(--alert-color);
-}
-
-.modal-background{
-    background-color: var(--bg-color-secondary);
-}
-
-
-/* Games */
-
-/* block height */
-.card-height{
-    height: 100%;
-}
-
-.box-shadow{
-    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25)
-}
-
-
-
-/* Media Query */
-
-@media (min-width: 1020px) {
-    /* Global */
-    nav {
-        top: 10px;
-        height: 77px;
-        border-radius: 10px;
-        box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25)
-    }
-    /* Home page specific */
-    .first-section {
-        padding-top: 77px;
-        height: 50vh;
-    }
-
-    /* label input avatar page account */
-    .label-file {
-        font-size: 1em;
-    }
-
-    .first-section-social {
-        padding-top: 77px;
-    }
-
-    /* Games.html bloc page margin-top */
-    .game-margin-top {
-        margin-top: 10%;
-    }
-
-    a span{
-        font-size: 0.8em;
-    }
-
-}
-
-@media (max-width: 1020px) {
-    /* Global */
-    .bottom-nav-margin {
-        margin-bottom: 77px;
-    }
-}
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-}
-
-.dernierAvantFoot {
-    margin-bottom: 150px;
-}
-
 
 /* change default color of Bootstrap accordion */
 
@@ -342,6 +273,26 @@ footer {
 
 .accordion-button {
     background-color: var(--bg-purple);
+}
+
+/* header text color to white */
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;.transparent-bg {
+    background-color: transparent !important;
+}
+}
+
+/* Remove active blue glow */
+
+.accordion-button:focus {
+    box-shadow: inset 0 0 5px white;
+}
+
+/* Change arrow color to white */
+
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
 
@@ -372,8 +323,364 @@ footer {
 }
 
 
+/* ####################### */
+/* Specific Pages Settings */
+
+/* Index Page */
+
+.first-background-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/gaming-desk-complete-setup.jpg);
+    background-size: cover;
+
+}
+
+
+.carousel-indicators {
+    position: relative;
+    bottom: 10px;
+}
+
+.desktop-card {
+    height: 100%;
+    background-color: #171F33;
+    border-radius: 0;
+    border: none;
+}
+
+.desktop-card > img {
+    border-radius: 0;
+}
+
+.divider {
+    height: 2px;
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+
+/* Hub */
+
+.hub .nav-tabs .active {
+    background-color: var(--bg-purple-faded);
+}
+
+.game-tag-color {
+    color: #EAA928;
+}
+
+/* Purple Faded To Red (Hub buttons) */
+
+.lh-buttons-purple-faded-to-red {
+    font-weight: 700;
+    padding: 8px 24px;
+    border-radius: 2rem;
+    box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--bg-purple-faded);
+}
+
+.lh-buttons-purple-faded-to-red::after {
+    content: "Demande Envoyée";
+}
+
+.lh-buttons-purple-faded-to-red:hover {
+    background-color: var(--alert-color);
+}
+
+.lh-buttons-purple-faded-to-red:focus {
+    background-color: var(--alert-color);
+    box-shadow: inset 0 0 5px white;
+}
+
+.lh-buttons-purple-faded-to-red:hover::after {
+    content: "Annuler Demande";
+}
+
+.lh-buttons-purple-faded-to-red:focus::after {
+    content: "Annuler Demande";
+}
+
+
+/* Hub Chat */
+
+/* Scrollbar */
+/* width */
+.chat-window::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+.chat-window::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.chat-window::-webkit-scrollbar-thumb {
+  background: var(--bg-purple);
+  border-radius: 10px;
+}
+
+/* Chat Window */
+
+.chat-window {
+    height: 70vh;
+    padding: 16px 12px 8px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.chat-window p {
+    margin: 0;
+}
+
+.chat-window article {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+}
+
+.chat-window .message {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    border-radius: 5px;
+}
+
+.chat-window .message:hover {
+    background-color: var(--bg-color-secondary);
+}
+
+.chat-window .message-body {
+    flex-grow: 1;
+}
+
+.report {
+    visibility: hidden;
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.chat-window .message:hover .report {
+    visibility: visible;
+}
+
+.chat-window article.disclaimer {
+    background-color: var(--alert-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.chat-window .message .message-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    gap: 1rem;
+}
+
+.chat-window .message .card-title {
+    font-size: 20px;
+    margin: 0;
+}
+
+
+/* Login & Connection */
+
+.login-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.5)), url(../images/man-neon-suit-sits-chair-with-neon-sign-that-says-word-it.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+
+/* Account */
+
+main.account-fields h2 {
+    font-size: 1rem;
+    flex: 100%;
+}
+
+main.account-fields section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    background-color: var(--bg-purple-faded);
+}
+
+main.account-fields form, section#profile-picture p, section#cookies div, section#delete-account div.accordion-total {
+    flex: 100%;
+    padding: 1em;
+}
+
+section#profile-picture form {
+    flex: calc(100% - 70px);
+}
+
+main.account-fields form > label {
+    flex: 25%;
+    max-width: 25%;
+}
+
+main.account-fields form:not(#formNotification) {
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+/* form upload Avatar */
+.label-file {
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px dashed rgba(104, 79, 163, 0.75);
+    background-color: #1E1F22;
+    display: block;
+    font-size: 0.8em;
+}
+
+.label-file:hover {
+    background-color: rgba(104, 79, 163, 0.75);
+}
+
+.modal-background{
+    background-color: var(--bg-color-secondary);
+}
+
+/* Socials */
 /* Change color of placeholder in a chat between 2 users */
 
 .inputChat .form-control::placeholder {
     color: rgb(168, 168, 168);
+}
+
+.space-before-input-chat {
+    margin-bottom: 55px;
+}
+
+/* Admin - dashboard */
+
+.nav-dashboard-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+
+}
+
+.dashboard-title{
+    margin-right: 7.3rem;
+}
+
+#nav-dashboard{
+    min-width:250px;
+}
+
+
+
+
+
+/* Media Query */
+
+
+@media (min-width: 1020px) {
+    /* Global */
+    nav {
+        top: 10px;
+        height: 77px;
+        border-radius: 10px;
+        box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.25)
+    }
+    /* Home page specific */
+    .first-section {
+        padding-top: 77px;
+        height: 70vh;
+    }
+
+    /* label input avatar page account */
+    .label-file {
+        font-size: 1em;
+    }
+
+    .first-section-social {
+        padding-top: 77px;
+    }
+
+    /* Games.php bloc page margin-top */
+    .game-margin-top {
+        margin-top: 10%;
+    }
+
+    /* hero first bloc index.php */
+    .hero-size{
+        font-size: 1.3rem;
+    }
+
+    .hero-size-title{
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 1020px) {
+    /* Global */
+    .bottom-nav-margin {
+        margin-bottom: 77px;
+    }
+
+    .dashboard-title{
+        margin-right: 0rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    main.account-fields form > label {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    section#profile-picture, section#profile-picture form{
+        justify-content: center;
+    }
+
+    section#cookies div {
+        flex-wrap: wrap;
+    }
+
+    section#cookies span.label {
+        flex: 100%;
+        max-width: 100%;
+    }.remove-style-default{
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    .dashboard-title{
+        margin-right: 0rem;
+    }
+}
+
+.hidden-button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    cursor: pointer;
+    /* Ajouter d'autres styles si nécessaire */
+}
+
+/* TEST TABLES*/
+
+table tr td, table tr th{
+    background-color: rgba(0,0,0, 0) !important;
+}
+
+.notif {
+    margin-bottom: 100px;
 }
